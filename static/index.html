@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voice Translation System</title>
+        <!-- Link to the external CSS file -->
+        <link rel="stylesheet" href="/C:\Users\madhu\OneDrive\Desktop\project_root/static/css/style.css">
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="oval">
+            <h2>Voice Translation System</h2>
+        </div>
+        <p>This is a multi-language translation system which is made using artificial intelligence which can translate up to 99 languages.</p>
+
+        <div class="container">
+            <div class="upload-form">
+                <div class="subheading">Upload the audio file that needs to be translated:</div>
+                <form action="/uploadfile/" enctype="multipart/form-data" method="post">
+                    <label class="file-label">
+                        
+                        <input name="file" type="file" accept="audio/*" required>
+                    </label>
+                    <div class="button-container">
+                        <div class="button-background"></div>
+                        <button class="button-53" type="submit">Translate</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

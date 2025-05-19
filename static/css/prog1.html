@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Program 1</title>
+ <style>
+ * {
+ font-size: 25px;
+ padding: 10px;
+ }
+ table, td,th
+ {
+ border: 1px solid blue;
+ width: 33%;
+ text-align: center;
+ background-color: darkkhaki;
+ }
+ table {
+ margin: auto;
+ }
+ input {
+ text-align: center;
+ width: 300px;
+ }
+ </style>
+</head>
+<body>
+ <script type="text/javascript">
+ function calculate(id)
+ {
+ var val1 = parseFloat(document.getElementById("value1").value);
+ var val2 = parseFloat(document.getElementById("value2").value);
+ var result = 0;
+ if (isNaN(val1) || isNaN(val2))
+ {
+ document.getElementById("answer").value = "Error!";
+ document.getElementById("answer").style.color = "red";
+ document.getElementById("answer").style.backgroundColor = "yellow";
+ }
+ else
+{
+ if (id == "+")
+ {
+ result = val1 + val2;
+ }
+ else
+if (id == "-")
+ {
+ result = val1 - val2;
+ }
+ else
+if (id == "*")
+{
+ result = val1 * val2;
+ }
+ else
+if (id == "/")
+{
+ result = val1 / val2;
+ }
+ document.getElementById("answer").style.backgroundColor = "green";
+ document.getElementById("answer").style.color = "white";
+ document.getElementById("answer").value = result;
+ }
+ }
+ function cls()
+ {
+ document.getElementById("answer").style.backgroundColor = "white";
+ clsdis("answer");
+ clsdis("value2");
+ clsdis("value1");
+ }
+
+function clsdis(id)
+{
+ document.getElementById(id).value = "";
+}
+</script>
+ <table>
+ <tr>
+ <th colspan="4">SIMPLE CALCULATOR</th>
+ </tr>
+ <tr>
+ <td>Value 1</td>
+ <td><input type="number" id="value1"></td>
+ </tr>
+ <tr>
+ <td>Value 2</td>
+ <td><input type="number" id="value2"></td>
+ </tr>
+ <tr>
+ <td><input type="button" value="Addition" id="+"
+onclick="calculate(this.id)"></td>
+ <td><input type="button" value="Subtraction" id="-"
+onclick="calculate(this.id)"></td>
+ </tr>
+ <tr>
+ <td><input type="button" value="Division" id="/"
+onclick="calculate(this.id)"></td>
+ <td><input type="button" value="Multiplication" id="*"
+onclick="calculate(this.id)"></td>
+ </tr>
+ <tr>
+ <td>Answer: </td>
+ <td><input type="text" id="answer" value="" disabled></td>
+ </tr>
+ <tr>
+ <td colspan="2"><input type="button" value="Clear Values" id="cls"
+onclick="cls()"></td>
+ </tr>
+ </table>
+</body> </html>
